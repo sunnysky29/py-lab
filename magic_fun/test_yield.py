@@ -46,3 +46,4 @@ def foo(num):
         
 for i in foo(4):
     print(i)
+
