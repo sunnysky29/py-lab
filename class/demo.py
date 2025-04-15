@@ -19,8 +19,12 @@ class Animal:
         # 修改类属性（统计实例数量）
         Animal.animal_count += 1
     
+    def __warning(self):
+        print(f'private !!!!')
+    
     # 获取私有属性的方法（封装）
     def get_age(self):
+        self.__warning()
         return self.__age
     
     # 修改私有属性的方法（封装）
@@ -89,6 +93,7 @@ print(cat1.name)
 
 # 访问私有属性（错误）
 # print(dog1.__age)  # AttributeError: 'Animal' object has no attribute '__age'
+# dog1.__warning()
 
 # 通过方法访问私有属性
 print(dog1.get_age())
