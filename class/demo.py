@@ -20,6 +20,7 @@ class Animal:
         Animal.animal_count += 1
     
     def __warning(self):
+        print(self.species)
         print(f'private !!!!')
     
     # 获取私有属性的方法（封装）
@@ -42,7 +43,10 @@ class Animal:
     @classmethod
     def get_animal_count(cls):
         return cls.animal_count
-
+    
+    @staticmethod  # 纯功能，无类依赖
+    def static_method(y):
+        return y * 3  
 
     # 普通方法（实例方法）
     def make_sound(self):
@@ -96,6 +100,8 @@ print(cat1.name)
 # dog1.__warning()
 
 # 通过方法访问私有属性
+print(f'-'*20)
+print(dog1.static_method(2), '!@@')
 print(dog1.get_age())
 
 # 访问和修改类属性
