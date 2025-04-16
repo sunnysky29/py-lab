@@ -26,6 +26,8 @@ class Animal:
     # 获取私有属性的方法（封装）
     def get_age(self):
         self.__warning()
+        print(self.__class__.get_animal_count(), '调用类方法')
+        print(self.__class__.static_method(45), '调用静态方法')
         return self.__age
     
     # 修改私有属性的方法（封装）
