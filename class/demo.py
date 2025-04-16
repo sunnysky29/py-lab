@@ -28,6 +28,7 @@ class Animal:
         self.__warning()
         print(self.__class__.get_animal_count(), '调用类方法')
         print(self.__class__.static_method(45), '调用静态方法')
+        print(self.__class__, '????')
         return self.__age
     
     # 修改私有属性的方法（封装）
@@ -107,6 +108,7 @@ print(dog1.static_method(2), '!@@')
 print(dog1.get_age())
 
 # 访问和修改类属性
+print(f'-'*20)
 print(f'类属性：....')
 print(Animal.species)  
 print(Dog.species)  
